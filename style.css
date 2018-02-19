@@ -7,3 +7,57 @@ URI: https://github.com/radu-themeisle
 Template: hestia
 Version: 0.1
 */
+
+h1, h2, h3, h4, h5, h6 {
+    color: #737373;
+}
+
+h2, h4 {
+    font-family: 'Roboto Slab', serif;
+}
+
+h5 {
+    font-family: 'Open Sans', sans-serif;
+}
+
+h2.hestia-title {
+    color: rgba(115, 115, 115, 0.95);
+    font-size: 30px;
+    font-weight: 300;
+    line-height: 45px;
+}
+
+h5.description {
+    text-transform: uppercase;
+    color: rgba(115, 115, 115, 0.5);
+    line-height: 30px;
+    font-weight: 400;
+    letter-spacing: 3px;
+    font-size: 15px;
+}
+
+.hestia-features .container > .row > div {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.hestia-features .hestia-features-content .hestia-info {
+    text-align: left;
+}
+
+.hestia-info .info-title, .info .info-title {
+    margin: 0 0 45px;
+}
+
+h4.card-title, .hestia-info h4.info-title, .footer .widget h5, section.contactus h4.hestia-title {
+    font-size: 22px;
+    color: #737373;
+    font-weight: 400;
+}
+
+.hestia-info p, .info p {
+    color: rgba(115, 115, 115, 0.85);
+    font-family: 'Open Sans', sans-serif;
+    line-height: 30px;
+    font-weight: 400;
+}

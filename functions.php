@@ -26,3 +26,34 @@ function astell_child_get_parent_options() {
     }
 }
 add_action( 'after_switch_theme', 'astell_child_get_parent_options' );
+
+
+/**
+ * Register Fonts
+ *
+ * @return string
+ */
+function astell_fonts_url() {
+
+    $font_familiy = 'Montserrat:300,400,700';
+
+    $query_args = array(
+        'family' => urlencode( $font_familiy ),
+        'subset' => urlencode( 'latin,latin-ext' ),
+    );
+    $fonts_url  = add_query_arg( $query_args, 'https://fonts.googleapis.com/css' );
+
+    return $fonts_url;
+}
+
+function astell_enqueue_scripts()
+{
+    wp_dequeue_script( 'hestia_fonts' );
+
+    $hestia_headings_font = get_theme_mod('hestia_headings_font');
+    $hestia_body_font = get_theme_mod('hestia_body_font');
+    if (empty($hestia_headings_font) || empty($hestia_body_font)) {
+        wp_enqueue_style('hestia_fonts', astell_fonts_url(), array(), HESTIA_VERSION);
+    }
+}
+add_action( 'wp_enqueue_scripts', 'astell_enqueue_scripts' );

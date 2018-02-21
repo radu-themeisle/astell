@@ -25,51 +25,7 @@ h5.description {
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    box-shadow: 0px 9px 30px 1px rgba(24, 206, 15, 0.4);
-    line-height: 100px;
-}
-
-.hestia-info p{
-    padding: 0 45px;
-}
-
-
-.hestia-blogs {
-    background-color: #e4e4e4;
-}
-
-.hestia-blog-item {
-    background-color: #fff;
-    margin-right: 10px;
-    margin-left: 10px;
-}/*
-Theme Name: Astell
-Theme URI: https://github.com/radu-themeisle
-Description: This is a custom child theme I have created.
-Author: Radu
-URI: https://github.com/radu-themeisle
-Template: hestia-pro
-Version: 0.1
-*/
-#features, h2.hestia-title, h5.description, h4.info-title {
-    font-family: Montserrat, "Helvetica Neue", sans-serif;
-}
-
-.hestia-info h4.info-title {
-    font-size: 25px;
-    font-weight: 400;
-}
-
-h5.description {
-    color: #9A9A9A;
-    padding: 0 50px;
-}
-
-.hestia-info .icon > i, .info .icon > i {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    box-shadow: 0px 9px 30px 1px rgba(24, 206, 15, 0.4);
+    box-shadow: 2px 11px 20px;
     line-height: 100px;
 }
 

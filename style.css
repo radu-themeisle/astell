@@ -7,39 +7,169 @@ URI: https://github.com/radu-themeisle
 Template: hestia-pro
 Version: 0.1
 */
-#features, h2.hestia-title, h5.description, h4.info-title {
+
+h2.hestia-title, h5.description, h4.info-title {
     font-family: Montserrat, "Helvetica Neue", sans-serif;
 }
 
-.hestia-info h4.info-title {
+/* Styling the Features section */
+
+#features .hestia-info h4.info-title {
     font-size: 25px;
     font-weight: 400;
 }
 
-h5.description {
+#features h5.description {
     color: #9A9A9A;
     padding: 0 50px;
 }
 
-.hestia-info .icon > i, .info .icon > i {
+#features .hestia-info .icon > i, #features .info .icon > i {
     width: 100px;
     height: 100px;
     border-radius: 50%;
     box-shadow: 2px 11px 20px;
     line-height: 100px;
+    font-size: 45px;
+}
+/* Remove box-shadow from Conact section icons */
+.hestia-description .icon > i, .info .icon > i {
+    box-shadow: none;
 }
 
-.hestia-info p{
+#features .hestia-info p{
     padding: 0 45px;
 }
 
+/* Styling the layout of Latests Blog Posts */
 
 .hestia-blogs {
-    background-color: #e4e4e4;
+    background-color: #eee;
 }
+
 
 .hestia-blog-item {
     background-color: #fff;
     margin-right: 10px;
     margin-left: 10px;
+    margin-bottom: 30px;
+    border-radius: 4px 4px 0 0;
+}
+
+.home #blog.hestia-blogs .hestia-blog-item {
+    margin-right: 15px;
+    margin-left: 15px;
+    padding-right: 0;
+    padding-left: 0;
+    box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+    width: 25%;
+}
+
+.card-blog {
+    margin-top: 0;
+}
+
+#blog .card-image, #blog .card-plain .card-image, #blog .card-plain .card-image img {
+    border-radius: 4px 4px 0 0;
+}
+
+.card .card-image {
+    box-shadow: none;
+}
+/* Styling card content */
+.card-blog .card-title {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.card-plain .content {
+    padding: 20px;
+    text-align: left;
+}
+
+#blog h2.hestia-title {
+    text-align: left;
+    position: relative;
+    left: -100px;
+}
+
+#blog h5.description {
+    display: none;
+}
+
+h6.category {
+    text-transform: none;
+}
+
+/* Styling Our Team section */
+#team h5.description {
+    font-size: 22px;
+    line-height: 30px;
+}
+
+.hestia-team h5.description, .team h5.description {
+    margin-bottom: 15px;
+}
+
+#team .card-image, #team .card-plain .card-image, #team .card-plain .card-image img {
+    border-radius: 4px;
+    box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.3)
+}
+
+#team .card-title {
+    font-weight: 400;
+    color: #2c2c2c;
+}
+
+#team h6.category {
+    color: #9a9a9a;
+    font-weight: 700;
+    font-size: 12px;
+    margin-top: -6px;
+}
+
+.hestia-team .card .footer, .team .card .footer {
+    margin-top: -10px;
+}
+
+/* Styling What Clients say section */
+#testimonials h2.hestia-title {
+    margin-bottom: 30px;
+}
+#testimonials h5.description {
+    display: none;
+}
+
+#testimonials .content {
+    text-align: center;
+}
+
+#testimonials h4.card-title {
+    font-weight: 400;
+    font-size: 25px;
+    color: #2c2c2c;
+}
+
+#testimonials h6.category {
+    margin-top: -10px;
+    margin-bottom: 10px;
+    color: #f96332;
+    font-weight: 700;
+}
+
+#testimonials .card-description {
+    line-height: 27px;
+    font-size: 18px;
+    color: #9A9A9A;
+}
+
+/* Styling Contact Us section */
+
+#contact h5.description {
+    padding: 0;
+}
+
+#contact .fa-map-marker:before {
+    color: red;
 }

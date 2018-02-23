@@ -76,3 +76,9 @@ function astell_slider_layout() {
     return 'right';
 }
 add_filter( 'hestia_default_slider_alignment', 'astell_slider_layout');
+
+//Change the layout of team card, put the avatar on top
+function astell_team_avatar() {
+    return 'col-md-7';
+}
+add_filter( 'hestia_team_avatar', 'astell_team_avatar');

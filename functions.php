@@ -56,5 +56,23 @@ function astell_enqueue_scripts()
         wp_enqueue_style('hestia_fonts', astell_fonts_url(), array(), HESTIA_VERSION);
     }
 }
-add_action( 'wp_enqueue_scripts', 'astell_enqueue_scripts' );
 
+// Insert Latest blogposts author at bottom of card
+function latest_blogposts_author($id){
+    $post_author_id = get_post_field( 'post_author', $id );
+    $display_name = get_the_author_meta('display_name', $post_author_id);
+echo 'By: ' . $display_name;
+}
+add_action('hestia_frontpage_blog_card_bottom_author','latest_blogposts_author');
+
+// Insert Latest blogposts date at bottom of card
+function latest_blogposts_date(){
+    the_time('jS F');
+}
+add_action('hestia_frontpage_blog_card_bottom_date','latest_blogposts_date');
+
+// Make Homepage slider default 'right'
+function astell_slider_layout() {
+    return 'right';
+}
+add_filter( 'hestia_default_slider_alignment', 'astell_slider_layout');

@@ -344,11 +344,15 @@ div.wpforms-container .wpforms-form .form-group.is-focused .form-control,
     transition: all 0.5s ease-out;
 }
 
+.hestia-pricing .hestia-title, .hestia-pricing p {
+    color: #fff;
+}
+
 /* Pricing section gradient background */
 
 .section-gray {
     background-color: none;
-    background: linear-gradient(to bottom, #f2af5b 0%,#d49f62 75%,#39362e 100%);
+    background: linear-gradient(to bottom, #f2af5b 0%,#d49f62 65%,#000 100%);
 }
 
 /* Ribbon section button (subscribe to our Newsletter) */

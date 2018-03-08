@@ -313,6 +313,8 @@ div.wpforms-container .wpforms-form .form-group.is-focused .form-control,
 .card-pricing.card-raised:hover, .card-pricing.card-plain:hover{
     transform: translateY(-40px);
     background-color: #F2AF5B;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 45px;
 }
 
 .card-pricing.card-raised:hover.card .category:not([class*="text-"]), .card-pricing.card-raised:hover .card-title, .card-pricing.card-raised:hover .card-title small, .card-pricing.card-raised:hover li b, .card-pricing.card-raised:hover li,
@@ -333,4 +335,11 @@ div.wpforms-container .wpforms-form .form-group.is-focused .form-control,
 
 .content .btn.btn-primary {
     transition: all 0.5s ease-out;
+}
+
+/* Pricing section gradient background */
+
+.section-gray {
+    background-color: none;
+    background: linear-gradient(to bottom, #f2af5b 0%,#d49f62 75%,#39362e 100%);
 }

@@ -305,13 +305,32 @@ div.wpforms-container .wpforms-form .form-group.is-focused .form-control,
 
 /* Card pricing transform on hover */
 
-.card-raised:hover, .card-plain:hover {
+.card-pricing.card-raised, .card-pricing.card-plain {
+
+    transition: all 0.5s ease-out;
+}
+
+.card-pricing.card-raised:hover, .card-pricing.card-plain:hover{
     transform: translateY(-40px);
-    transition: 0.5s;
     background-color: #F2AF5B;
-    color: white;
+}
+
+.card-pricing.card-raised:hover.card .category:not([class*="text-"]), .card-pricing.card-raised:hover .card-title, .card-pricing.card-raised:hover .card-title small, .card-pricing.card-raised:hover li b, .card-pricing.card-raised:hover li,
+.card-pricing.card-plain:hover.card .category:not([class*="text-"]), .card-pricing.card-plain:hover .card-title, .card-pricing.card-plain:hover .card-title small, .card-pricing.card-plain:hover li b, .card-pricing.card-plain:hover li {
+    color: #f9f9f9;
 }
 
 .card-pricing ul li:hover, .card-plain ul li:hover {
-    background-color:white;
+    background-color: #5c4a72;
+    cursor: pointer;
+}
+
+.content .btn.btn-primary:hover {
+    background-color: #5c4a72;
+    transform: scale(1.2,1.2);
+    font-weight: 400;
+}
+
+.content .btn.btn-primary {
+    transition: all 0.5s ease-out;
 }

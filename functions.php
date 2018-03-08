@@ -189,6 +189,13 @@ function astell_testimonials_section_image() {
 
 add_action('hestia_testimonials_section_image', 'astell_testimonials_section_image');
 
+//Change default pictures of Ribbon section
+
+function astell_ribbon_background() {
+    return get_stylesheet_directory_uri() . '/assets/img/background.jpg';
+}
+add_filter( 'hestia_ribbon_background', 'astell_ribbon_background');
+
 //Default footer to 'white_footer'
 
 function astell_footer_style() {

@@ -12,7 +12,33 @@ body, h1, h2, h3, h4, h5, h6, h2.hestia-title, h5.description, h4.info-title, .b
     font-family: Montserrat, "Helvetica Neue", sans-serif;
 }
 
+/* Remove overlays from all frontpage sections */
+
+.header-filter:before {
+    background-color: rgba(0, 0, 0, 0)!important;
+}
+
+.section-image:after {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* Set "customzier" link color */
+
+.default-link, .section-image .description .default-link {
+    color:#F4874B;
+}
+
 /* Styling the Features section */
+
+.hestia-features {
+    background-color: #F2AF5B;
+}
+
+.hestia-features .container {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.4);
+}
 
 #features .hestia-info h4.info-title {
     font-size: 25px;
@@ -61,7 +87,7 @@ body, h1, h2, h3, h4, h5, h6, h2.hestia-title, h5.description, h4.info-title, .b
     margin-left: 15px;
     padding-right: 0;
     padding-left: 0;
-    box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.3);
+    box-shadow: 10px 10px 18px 0px rgba(0, 0, 0, 0.7);
     border-radius: 4px;
     width: 25%;
 }
@@ -92,6 +118,8 @@ body, h1, h2, h3, h4, h5, h6, h2.hestia-title, h5.description, h4.info-title, .b
     text-align: left;
     position: relative;
     left: -100px;
+    color: white;
+    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.7);
 }
 
 #blog h5.description {
@@ -103,9 +131,19 @@ h6.category {
 }
 
 /* Styling Our Team section */
-#team .card {
-    margin: 0 auto;
 
+.hestia-team {
+    background-color: #F2AF5B;
+}
+
+.hestia-team .container {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.4);
+}
+
+#team .hestia-team-content {
+    margin-left: 16.66666667%;
 }
 
 #team h5.description {
@@ -119,7 +157,7 @@ h6.category {
 
 #team .card-image, #team .card-plain .card-image, #team .card-plain .card-image img {
     border-radius: 50%;
-    box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 10px 16px 0  rgba(0, 0, 0, 0.4);
 }
 
 #team .card-plain .card-image {
@@ -149,6 +187,7 @@ h6.category {
 /* Styling What Clients Say section */
 #testimonials h2.hestia-title {
     margin-bottom: 30px;
+    color: white;
 }
 #testimonials h5.description {
     display: none;
@@ -161,7 +200,7 @@ h6.category {
 #testimonials h4.card-title {
     font-weight: 400;
     font-size: 25px;
-    color: #2c2c2c;
+    color: #fff;
 }
 
 #testimonials h6.category {
@@ -174,7 +213,7 @@ h6.category {
 #testimonials .card-description {
     line-height: 27px;
     font-size: 18px;
-    color: #9A9A9A;
+    color: #fff;
 }
 
 /* Styling Contact Us section */
@@ -183,11 +222,12 @@ h6.category {
     padding: 0;
 }
 
-#contact .fa-map-marker:before {
-    color: red;
-}
 
 /* Styling Blog page */
+
+.hestia-blogs {
+    background-color: #F2AF5B;
+}
 
 .blog-posts-wrap .card-plain {
     background-color: rgba(255, 255, 255, 0.7);
@@ -195,8 +235,16 @@ h6.category {
 }
 
 .card-blog.sticky {
-    box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.56), 0 4px 25px 0 rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
-    background-color: transparent;
+    box-shadow: 0 16px 38px -12px rgba(255, 255, 255, 0.56), 0 4px 25px 0 rgba(255, 255, 255, 0.3), 0 8px 10px -5px rgba(255, 255, 255, 0.3);
+    background-color: #5c4a72;
+    width: 1200px;
+    text-align: center;
+    position: relative;
+    right: 100px;
+}
+
+.card-title a {
+    color: greenyellow;
 }
 
 .card-blog.sticky .card-title {
@@ -208,7 +256,15 @@ h6.category {
 }
 
 .card-blog.sticky .card-description {
-    color: black;
+    color: white;
+    font-size: 20px;
+}
+
+.card-blog.sticky .card-title,
+.card-blog.sticky .card-title a:hover,
+.card-blog.sticky .card-title,
+.card-blog.sticky .card-description a:hover {
+    color: white;
 }
 
 .card-blog.sticky .card-image {
@@ -226,4 +282,36 @@ h6.category {
     float: right;
     color: #d48989;
     border-bottom: 1px dotted #eee3e3;
+}
+
+/* Form input underline color */
+
+.form-group.is-focused .form-control,
+div.wpforms-container .wpforms-form .form-group.is-focused .form-control,
+.nf-form-cont input:not([type=button]):focus,
+.nf-form-cont select:focus,
+.nf-form-cont textarea:focus {
+    background-image: -webkit-gradient(linear,left top, left bottom,from(#F2AF5B),to(#Fff)),-webkit-gradient(linear,left top, left bottom,from(#d2d2d2),to(#d2d2d2))!important;
+    background-image: -webkit-linear-gradient(#F2AF5B),to(#F2AF5B),-webkit-linear-gradient(#d2d2d2,#d2d2d2)!important;
+    background-image: linear-gradient(#F2AF5B),to(#F2AF5B),linear-gradient(#d2d2d2,#d2d2d2)!important;
+}
+
+/* style slider buttons */
+.page-header .btn {
+    border-radius: 50px;
+    border: 6px solid rgba(255,255,255,0.45);
+}
+
+
+/* Card pricing transform on hover */
+
+.card-raised:hover, .card-plain:hover {
+    transform: translateY(-40px);
+    transition: 0.5s;
+    background-color: #F2AF5B;
+    color: white;
+}
+
+.card-pricing ul li:hover, .card-plain ul li:hover {
+    background-color:white;
 }

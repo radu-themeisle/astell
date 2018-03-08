@@ -75,10 +75,154 @@ add_action('hestia_frontpage_blog_card_bottom_date','latest_blogposts_date');
 function astell_slider_layout() {
     return 'right';
 }
-add_filter( 'hestia_default_slider_alignment', 'astell_slider_layout');
+add_filter( 'hestia_slider_alignment', 'astell_slider_layout');
 
 //Change the layout of team card, put the avatar on top
 function astell_team_avatar() {
     return 'col-md-7';
 }
 add_filter( 'hestia_team_avatar', 'astell_team_avatar');
+
+//Change general layout to default to full width
+function astell_general_layout() {
+    return 0;
+}
+
+add_filter( 'hestia_default_layout', 'astell_general_layout');
+
+
+
+//Set the Blog default layout to alternative
+function astell_default_layout() {
+    return 'blog_alternative_layout';
+}
+add_filter( 'hestia_blog_default_layout', 'astell_default_layout');
+
+//Blog no sidebar
+
+function astell_blog_no_sidebar() {
+    return true;
+}
+
+add_filter( 'hestia_blog_no_sidebar', 'astell_blog_no_sidebar' );
+
+//Set the default accent color to orange
+function astell_accent_color() {
+    return '#F4874B';
+}
+add_filter( 'hestia_accent_color_default', 'astell_accent_color');
+
+//Change default picture of contact section
+
+function astell_contact_background() {
+    return get_stylesheet_directory_uri() . '/assets/img/sunset.jpg';
+}
+add_filter( 'hestia_contact_background_default', astell_contact_background);
+
+//Change default pictures of Slider section
+//Slider 1
+function astell_slider1() {
+    return get_stylesheet_directory_uri() . '/assets/img/astell_slider1.jpg';
+}
+add_filter( 'hestia_slider1', 'astell_slider1');
+
+//Slider 2
+function astell_slider2() {
+    return get_stylesheet_directory_uri() . '/assets/img/astell_slider2.jpg';
+}
+add_filter( 'hestia_slider2', 'astell_slider2');
+
+//Slider 3
+function astell_slider3() {
+    return get_stylesheet_directory_uri() . '/assets/img/astell_slider3.jpg';
+}
+add_filter( 'hestia_slider3', 'astell_slider3');
+
+//Change default button color of Slider section
+//Slider 1 button
+function astell_slider1_button() {
+    return '#F2AF5B';
+}
+add_filter( 'hestia_slider1_button', 'astell_slider1_button');
+
+//Slider 2 button
+function astell_slider2_button() {
+    return '#F2AF5B';
+}
+add_filter( 'hestia_slider2_button', 'astell_slider2_button');
+
+//Slider 3 button
+function astell_slider3_button() {
+    return '#F2AF5B';
+}
+add_filter( 'hestia_slider3_button', 'astell_slider3_button');
+
+//Change default pictures of About and Contact section
+
+function astell_background_image() {
+    return get_stylesheet_directory_uri() . '/assets/img/background.jpg';
+}
+add_filter( 'hestia_background_image', 'astell_background_image');
+
+//Add background image to Testimonials section
+
+/* Display overlay (section-image class) on testimonials section only if section has a background */
+
+function astell_testimonials_image(){
+
+$astell_testimonials_featured = get_theme_mod( 'hestia_feature_thumbnail', get_stylesheet_directory_uri() . '/assets/img/background.jpg');
+
+if ( ! empty( $astell_testimonials_featured ) ) {
+
+    $astell_testimonials_featured = 'style="background-image: url(\'' . esc_url( $astell_testimonials_featured ) . '\')"';
+}
+
+
+        echo $astell_testimonials_featured;
+}
+add_action('hestia_testimonials_background', 'astell_testimonials_image');
+
+function astell_testimonials_section_image() {
+    $class_to_add = 'img-responsive';
+    echo $class_to_add;
+}
+
+add_action('hestia_testimonials_section_image', 'astell_testimonials_section_image');
+
+//Default footer to 'white_footer'
+
+function astell_footer_style() {
+    return 'white_footer';
+}
+
+add_filter( 'hestia_default_footer', 'astell_footer_style');
+
+//Modify header gradient color
+
+function astell_header_gradient(){
+    return '#F46A4E';
+}
+
+add_filter( 'hestia_header_gradient_default', 'astell_header_gradient');
+
+//footer copyright
+
+function astell_credits() {
+    return sprintf(
+    /* translators: %1$s is Theme Name, %2$s is WordPress */
+        esc_html__( '%1$s | Powered by %2$s', 'hestia-pro' ),
+        sprintf(
+        /* translators: %s is Theme name */
+            '<a href="https://themeisle.com/themes/hestia/" target="_blank" rel="nofollow">%s</a>',
+            esc_html__( 'Astell', 'hestia-pro' )
+        ),
+        /* translators: %s is WordPress */
+        sprintf(
+            '<a href="%1$s" rel="nofollow">%2$s</a>',
+            esc_url( __( 'http://wordpress.org', 'hestia-pro' ) ),
+            esc_html__( 'R C', 'hestia-pro' )
+        )
+    );
+}
+
+add_filter( 'theme_mod_hestia_general_credits', 'astell_credits');

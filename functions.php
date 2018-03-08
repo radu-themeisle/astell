@@ -241,3 +241,19 @@ function astell_navbar_text_color_hover() {
 }
 
 add_filter( 'hestia_navbar_text_color_hover', 'astell_navbar_text_color_hover');
+
+//Ribbon text
+
+function astell_ribbon_text() {
+    return 'Don&#39;t miss out the latest news!';
+}
+
+add_filter( 'hestia_ribbon_text', 'astell_ribbon_text');
+
+//Ribbon button text
+
+function astell_subscribe_button() {
+    return 'subscribe now &#9889;';
+}
+
+add_filter ('hestia_subscribe_button', 'astell_subscribe_button');

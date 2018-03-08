@@ -226,3 +226,11 @@ function astell_credits() {
 }
 
 add_filter( 'theme_mod_hestia_general_credits', 'astell_credits');
+
+//navbar text color on hover
+
+function astell_navbar_text_color_hover() {
+    return '#F46A4E';
+}
+
+add_filter( 'hestia_navbar_text_color_hover', 'astell_navbar_text_color_hover');

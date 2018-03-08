@@ -350,3 +350,15 @@ div.wpforms-container .wpforms-form .form-group.is-focused .form-control,
     background-color: none;
     background: linear-gradient(to bottom, #f2af5b 0%,#d49f62 75%,#39362e 100%);
 }
+
+/* Ribbon section button (subscribe to our Newsletter) */
+
+#ribbon .btn.btn-primary:hover {
+    background-color: #5c4a72;
+    transform: scale(1.1,1.1);
+    font-weight: 400;
+}
+
+#ribbon .btn.btn-primary {
+    transition: all 0.5s ease-out;
+}

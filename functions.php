@@ -18,10 +18,10 @@ add_action( 'wp_enqueue_scripts', 'astell_child_parent_css', 10 );
  * @since 1.0.0
  */
 function astell_child_get_parent_options() {
-    $astell_mods = get_option( 'theme_mods_astell-pro' );
-    if ( ! empty( $astell_mods ) ) {
-        foreach ( $astell_mods as $astell_mod_k => $astell_mod_v ) {
-            set_theme_mod( $astell_mod_k, $astell_mod_v );
+    $hestia_mods = get_option( 'theme_mods_hestia-pro' );
+    if ( ! empty( $hestia_mods ) ) {
+        foreach ( $ahestia_mods as $hestia_mod_k => $hestia_mod_v ) {
+            set_theme_mod( $hestia_mod_k, $hestia_mod_v );
         }
     }
 }
@@ -157,7 +157,7 @@ function astell_slider3_button() {
 }
 add_filter( 'hestia_slider3_button', 'astell_slider3_button');
 
-//Change default pictures of About and Contact section
+//Change default pictures of About section
 
 function astell_background_image() {
     return get_stylesheet_directory_uri() . '/assets/img/background.jpg';
@@ -182,19 +182,12 @@ if ( ! empty( $astell_testimonials_featured ) ) {
 }
 add_action('hestia_testimonials_background', 'astell_testimonials_image');
 
-function astell_testimonials_section_image() {
-    $class_to_add = 'img-responsive';
-    echo $class_to_add;
-}
-
-add_action('hestia_testimonials_section_image', 'astell_testimonials_section_image');
-
 //Change default pictures of Ribbon section
 
 function astell_ribbon_background() {
     return get_stylesheet_directory_uri() . '/assets/img/background.jpg';
 }
-add_filter( 'hestia_ribbon_background', 'astell_ribbon_background');
+add_filter( 'hestia_ribbon_background_default', 'astell_ribbon_background');
 
 //Default footer to 'white_footer'
 

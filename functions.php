@@ -167,7 +167,7 @@ add_filter( 'hestia_background_image', 'astell_background_image');
 //Add background image to Testimonials section
 
 /* Display overlay (section-image class) on testimonials section only if section has a background */
-
+/* NU MERGE */
 function astell_testimonials_image(){
 
 $astell_testimonials_featured = get_theme_mod( 'hestia_feature_thumbnail', get_stylesheet_directory_uri() . '/assets/img/background.jpg');
@@ -180,7 +180,7 @@ if ( ! empty( $astell_testimonials_featured ) ) {
 
         echo $astell_testimonials_featured;
 }
-add_action('hestia_testimonials_background', 'astell_testimonials_image');
+add_action('hestia_testimonials_section_image', 'astell_testimonials_image');
 
 //Change default pictures of Ribbon section
 

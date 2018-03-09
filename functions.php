@@ -250,3 +250,12 @@ function astell_subscribe_button() {
 }
 
 add_filter ('hestia_subscribe_button', 'astell_subscribe_button');
+
+
+// Change background image of Subscribe Section
+
+function astell_subscribe_background_default() {
+    return get_stylesheet_directory_uri() . '/assets/img/sunset.jpg';
+}
+
+add_filter( 'hestia_subscribe_background_default', 'astell_subscribe_background_default');

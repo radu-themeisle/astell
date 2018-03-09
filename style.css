@@ -371,3 +371,9 @@ div.wpforms-container .wpforms-form .form-group.is-focused .form-control,
 .hestia-testimonials {
 background: linear-gradient(to bottom, #f2af5b 0%,#9e9e9e 36%,#9e9e9e 66%,#f2af5b 100%);
 }
+
+/**/
+
+.subscribe-line.subscribe-line-image:after {
+    background-color: rgba(0, 0, 0, 0.3);
+}

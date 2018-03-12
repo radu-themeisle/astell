@@ -159,10 +159,10 @@ add_filter( 'hestia_slider3_button', 'astell_slider3_button');
 
 //Change default pictures of About section
 
-function astell_background_image() {
+function astell_about_image() {
     return get_stylesheet_directory_uri() . '/assets/img/background.jpg';
 }
-add_filter( 'hestia_background_image', 'astell_background_image');
+add_filter( 'hestia_about_image_filter', 'astell_about_image');
 
 //Add background image to Testimonials section
 

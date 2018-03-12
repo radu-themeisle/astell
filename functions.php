@@ -20,7 +20,7 @@ add_action( 'wp_enqueue_scripts', 'astell_child_parent_css', 10 );
 function astell_child_get_parent_options() {
     $hestia_mods = get_option( 'theme_mods_hestia-pro' );
     if ( ! empty( $hestia_mods ) ) {
-        foreach ( $ahestia_mods as $hestia_mod_k => $hestia_mod_v ) {
+        foreach ( $hestia_mods as $hestia_mod_k => $hestia_mod_v ) {
             set_theme_mod( $hestia_mod_k, $hestia_mod_v );
         }
     }

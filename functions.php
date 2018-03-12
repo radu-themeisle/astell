@@ -170,11 +170,11 @@ add_filter( 'hestia_background_image', 'astell_background_image');
 
 function astell_testimonials_image(){
 
-$astell_testimonials_featured = get_theme_mod( 'hestia_feature_thumbnail', get_stylesheet_directory_uri() . '/assets/img/background.jpg');
+$astell_testimonials_featured = get_stylesheet_directory_uri() . '/assets/img/background.jpg';
 
 if ( ! empty( $astell_testimonials_featured ) ) {
 
-    $astell_testimonials_featured = 'style="background-image: url(\'' . esc_url( $astell_testimonials_featured ) . '\')"';
+    $astell_testimonials_featured = ' style="background-image: url(\'' . esc_url( $astell_testimonials_featured ) . '\')" ';
 }
 
 

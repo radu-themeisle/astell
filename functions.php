@@ -249,7 +249,7 @@ function astell_subscribe_button() {
     return 'subscribe now &#9889;';
 }
 
-add_filter ('hestia_subscribe_button', 'astell_subscribe_button');
+add_filter( 'hestia_subscribe_button', 'astell_subscribe_button');
 
 
 // Change background image of Subscribe Section
@@ -259,3 +259,34 @@ function astell_subscribe_background_default() {
 }
 
 add_filter( 'hestia_subscribe_background_default', 'astell_subscribe_background_default');
+
+//Change 'login_headerurl'
+
+function astell_headerurl() {
+    return 'https://themeisle.com';
+}
+
+add_filter( 'login_headerurl', 'astell_headerurl');
+
+
+//Change Login url title
+function astell_login_logo_url_title() {
+    return 'Astell to the tell';
+}
+add_filter( 'login_headertitle', 'astell_login_logo_url_title' );
+
+//Change the Login Logo
+
+function astell_login_logo() { ?>
+    <style type="text/css">
+        #login h1 a, .login h1 a {
+            background-image: url('http://wwwcdn.howdesign.com/wp-content/uploads/glug-animated-logos1.gif');
+            height: 235px;
+            width:314px;
+            background-size: 314px 235px;
+            background-repeat: no-repeat;
+            padding-bottom: 0;
+        }
+    </style>
+<?php }
+add_action( 'login_enqueue_scripts', 'astell_login_logo' );

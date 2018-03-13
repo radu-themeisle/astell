@@ -20,3 +20,8 @@ body.login {
     font-size: 1.4rem;
     border-left-color: red;
 }
+
+/* Added gif with transparent background */
+/*#login {*/
+    /*background-image: url('https://static.ezgif.com/images/bg-transparent.gif');*/
+/*}*/

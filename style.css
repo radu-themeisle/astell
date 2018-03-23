@@ -415,3 +415,12 @@ p.demo_store, .admin-bar p.demo_store {
 .shop-item:hover > .card > .card-image, .product:hover > .card > .card-image {
     border-radius: 50px;
 }
+
+/* Styling of product search button*/
+
+button {
+    padding: 2px 4px 1px 8px;
+}
+
+button:hover {
+    font-size: 2rem;

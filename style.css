@@ -377,3 +377,13 @@ background: linear-gradient(to bottom, #f2af5b 0%,#9e9e9e 36%,#9e9e9e 66%,#f2af5
 .subscribe-line.subscribe-line-image:after {
     background-color: rgba(0, 0, 0, 0.3);
 }
+
+/* Styling the store notice  */
+p.demo_store, .admin-bar p.demo_store {
+    width: 10%;
+    position: fixed;
+    left: auto;
+    top: 50vh;
+    background: linear-gradient(to right, #f4874a 0%,#e0e0e0 100%);
+    border-radius: 20px 0 0 20px;
+}

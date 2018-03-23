@@ -387,3 +387,14 @@ p.demo_store, .admin-bar p.demo_store {
     background: linear-gradient(to right, #f4874a 0%,#e0e0e0 100%);
     border-radius: 20px 0 0 20px;
 }
+
+/* Tooltip styling */
+.tooltip-inner {
+    border-radius: 50px;
+    background-color: red;
+    color: white;
+}
+
+.tooltip.top .tooltip-arrow {
+    border-top-color: red;
+}

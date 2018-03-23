@@ -299,3 +299,10 @@ function astell_login_stylesheet() {
     // WANT TO ADD EXTRA js TO THE LOGIN PAGE
 }
 add_action( 'login_enqueue_scripts', 'astell_login_stylesheet' );
+
+//Change default sidebar on page to left
+
+function astell_woocommerce_sidebar() {
+    return 'sidebar-left';
+}
+add_filter('hestia_wc_sidebar', 'astell_woocommerce_sidebar');

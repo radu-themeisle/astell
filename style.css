@@ -424,3 +424,15 @@ button {
 
 button:hover {
     font-size: 2rem;
+}
+/* Widget product category styling */
+
+.cat-item {
+    background: linear-gradient(to right, #f4874a 0%, #ff644d 100%);
+    border-radius: 50px;
+    text-align: center;
+}
+
+.cat-item:hover {
+    background: greenyellow;
+}

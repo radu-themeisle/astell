@@ -405,3 +405,13 @@ p.demo_store, .admin-bar p.demo_store {
     background: linear-gradient(to bottom, #f4874a 0%,#fff 100%);
     color: mediumvioletred;
 }
+
+
+/* Styling product card image on hover */
+.card .card-image {
+    border-radius: 300px;
+}
+
+.shop-item:hover > .card > .card-image, .product:hover > .card > .card-image {
+    border-radius: 50px;
+}

@@ -454,6 +454,13 @@ button:hover {
     cursor: crosshair;
 }
 
+/* When hovering a product that is not on sale the image scales up */
+
+.woocommerce-product-gallery__image:hover {
+    transform: scale(1.1);
+    transition-duration: 0.6s;
+}
+
 /* When focused on product qty input bottom border colors and animates */
 
 .woocommerce div.product form.cart input:focus {

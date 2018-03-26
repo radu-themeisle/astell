@@ -384,7 +384,7 @@ p.demo_store, .admin-bar p.demo_store {
     position: fixed;
     left: auto;
     top: 50vh;
-    background: linear-gradient(to right, #f4874a 0%,#e0e0e0 100%);
+    background: linear-gradient(to bottom, #f4874a 0%,#E20041 100%);
     border-radius: 20px 0 0 20px;
 }
 
@@ -402,7 +402,7 @@ p.demo_store, .admin-bar p.demo_store {
 /* Pagination hover color */
 
 .woocommerce nav.woocommerce-pagination ul li a:hover {
-    background: linear-gradient(to bottom, #f4874a 0%,#fff 100%);
+    background: linear-gradient(to bottom, #f4874a 0%,#E20041 100%);
     color: mediumvioletred;
 }
 
@@ -428,7 +428,7 @@ button:hover {
 /* Widget product category styling */
 
 .cat-item {
-    background: linear-gradient(to right, #f4874a 0%, #ff644d 100%);
+    background: linear-gradient(to bottom, #f4874a 0%, #E20041 100%);
     border-radius: 50px;
     text-align: center;
 }

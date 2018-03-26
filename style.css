@@ -447,3 +447,9 @@ button:hover {
     width: auto;
     top: 70px;
 }
+
+/* Crosshair pointer on product image hover */
+
+.woocommerce-product-gallery__image > a {
+    cursor: crosshair;
+}

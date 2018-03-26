@@ -454,3 +454,10 @@ button:hover {
     cursor: crosshair;
 }
 
+/* When focused on product qty input bottom border colors and animates */
+
+.woocommerce div.product form.cart input:focus {
+    transition: ease-in;
+    transition-duration: 0.2s;
+    border-bottom: 3px dotted #FC7549;
+}

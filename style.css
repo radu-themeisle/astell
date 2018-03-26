@@ -471,15 +471,17 @@ button:hover {
 
 /* woocommerce price color styling */
 
-.woocommerce-price-suffix {
+.woocommerce-price-suffix, .card-product .footer .price h4 {
     color: #f4874a;
     font-size: 1rem;
     font-weight: bold;
     vertical-align: top;
 }
 
-.woocommerce-Price-amount {
+.woocommerce-Price-amount,  .card-product .footer .price .woocommerce-Price-amount {
     text-shadow: 2px 2px #9c9c9cb8;
+    color: black;
+    font-size: 2rem;
 }
 
 /* Woocommerce variations (size, color) styling */
@@ -529,4 +531,14 @@ section ul {
 
 .woocommerce div.product .woocommerce-tabs ul.tabs.wc-tabs li.active a {
     color: #fff !important;
+}
+
+/* Frontpage products section */
+
+.hestia-shop .hestia-title {
+    color: white;
+}
+
+.hestia-shop {
+    background: url("http://backgroundcheckall.com/wp-content/uploads/2017/12/shop-background-3.jpg");
 }

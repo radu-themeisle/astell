@@ -56,7 +56,6 @@ function astell_enqueue_scripts()
         wp_enqueue_style('hestia_fonts', astell_fonts_url(), array(), HESTIA_VERSION);
     }
 }
-
 // Insert Latest blogposts author at bottom of card
 function latest_blogposts_author($id){
     $post_author_id = get_post_field( 'post_author', $id );
@@ -306,3 +305,10 @@ function astell_woocommerce_sidebar() {
     return 'sidebar-left';
 }
 add_filter('hestia_wc_sidebar', 'astell_woocommerce_sidebar');
+
+// Reduced background opacity for product image lightbox
+
+add_filter( 'woocommerce_single_product_photoswipe_options', function( $options ) {
+	$options['bgOpacity'] = '0.5';
+	return $options;
+}, 10 );

@@ -503,3 +503,9 @@ button:hover {
 .woocommerce span.onsale {
     font-size: 2rem;
 }
+
+/* "Related products" styling */
+
+section ul {
+    display: grid;
+}

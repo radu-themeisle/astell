@@ -468,3 +468,16 @@ button:hover {
     transition-duration: 0.2s;
     border-bottom: 3px dotted #FC7549;
 }
+
+/* woocommerce price color styling */
+
+.woocommerce-price-suffix {
+    color: #f4874a;
+    font-size: 1rem;
+    font-weight: bold;
+    vertical-align: top;
+}
+
+.woocommerce-Price-amount {
+    text-shadow: 2px 2px #9c9c9cb8;
+}

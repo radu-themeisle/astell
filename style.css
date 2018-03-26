@@ -492,10 +492,7 @@ button:hover {
 /* "SALE!" tag styling */
 
 .onsale {
-    top: 200px !important;
-    left: 100px !important;
     background-color: transparent !important;
-
     color: red !important;
     transform: rotate(-20deg);
     border-radius: 50%;

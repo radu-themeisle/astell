@@ -481,3 +481,10 @@ button:hover {
 .woocommerce-Price-amount {
     text-shadow: 2px 2px #9c9c9cb8;
 }
+
+/* Woocommerce variations (size, color) styling */
+
+.variations tr td.label {
+    color: #FC7549;
+    font-size: 2rem;
+}

@@ -488,3 +488,21 @@ button:hover {
     color: #FC7549;
     font-size: 2rem;
 }
+
+/* "SALE!" tag styling */
+
+.onsale {
+    top: 200px !important;
+    left: 100px !important;
+    background-color: transparent !important;
+
+    color: red !important;
+    transform: rotate(-20deg);
+    border-radius: 50%;
+    border: 10px solid transparent;
+    border-image: url("https://www.w3schools.com/css/border.png") 20% round;
+}
+
+.woocommerce span.onsale {
+    font-size: 2rem;
+}

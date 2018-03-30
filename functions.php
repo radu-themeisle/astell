@@ -59,8 +59,9 @@ function astell_enqueue_scripts()
 // Insert Latest blogposts author at bottom of card
 function latest_blogposts_author($id){
     $post_author_id = get_post_field( 'post_author', $id );
+
     $display_name = get_the_author_meta('display_name', $post_author_id);
-echo 'By: ' . $display_name;
+echo esc_html__('By: ','astell') . $display_name;
 }
 add_action('hestia_frontpage_blog_card_bottom_author','latest_blogposts_author');
 
@@ -169,7 +170,7 @@ add_filter( 'hestia_about_image_filter', 'astell_about_image');
 /* NU MERGE */
 function astell_testimonials_image(){
 
-$astell_testimonials_featured = get_stylesheet_directory_uri() . '/assets/img/background.jpg';
+$astell_testimonials_featured = get_theme_mod('aa', get_stylesheet_directory_uri().'/assets/img/background.jpg' );
 
 if ( ! empty( $astell_testimonials_featured ) ) {
 
@@ -312,3 +313,25 @@ add_filter( 'woocommerce_single_product_photoswipe_options', function( $options 
 	$options['bgOpacity'] = '0.5';
 	return $options;
 }, 10 );
+
+
+
+
+function astell_customize_register( $wp_customize ) {
+	$wp_customize->add_setting(
+		'aa', array(
+			'sanitize_callback' => 'esc_url_raw',
+			'default'           => get_stylesheet_directory_uri() . '/assets/img/background.jpg',
+		)
+	);
+	$wp_customize->add_control(
+		new WP_Customize_Image_Control(
+			$wp_customize, 'aa', array(
+				'label'           => esc_html__( 'testimo background', 'hestia-pro' ),
+				'section'         => 'hestia_testimonials',
+				'priority'        => 15,
+			)
+		)
+	);
+}
+add_action( 'customize_register', 'astell_customize_register' );

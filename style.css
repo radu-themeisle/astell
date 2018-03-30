@@ -439,7 +439,8 @@ button:hover {
 
 /* Woocomerce shop page header with image */
 
-.woocommerce .page-header .container {
+.woocommerce .page-header .container,
+.woocommerce.single-product .header-filter {
     background: url("https://www.auraprint.uk/media/catalog/product/s/a/sale_banner_header_image_2000_x_466px-01.jpg");
     background-attachment: fixed;
     background-position: top;
